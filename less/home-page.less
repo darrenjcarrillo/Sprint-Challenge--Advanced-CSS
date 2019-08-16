@@ -8,9 +8,17 @@
       @media @mobile {
         width: 100%;
       }
+
+      @media @tablet {
+        width: 100%;
+      }
     }
 
     @media @mobile {
+      width: 100%;
+    }
+
+    @media @tablet {
       width: 100%;
     }
   }
@@ -40,9 +48,17 @@
         .mobile-media();
         .mobile-flex();
       }
+
+      @media @tablet {
+        // this is @media @mobile {width: 90%}
+        .mobile-flex();
+      }
     }
 
     @media @mobile {
+      .mobile-flex();
+    }
+    @media @tablet {
       .mobile-flex();
     }
 
@@ -50,10 +66,16 @@
       @media @mobile {
         display: none;
       }
+      @media @tablet {
+        display: none;
+      }
     }
 
     .launch {
       @media @mobile {
+        display: none;
+      }
+      @media @tablet {
         display: none;
       }
     }
@@ -103,6 +125,9 @@
 
       // this is @media @mobile {width: 90%}
       .mobile-media();
+      @media @tablet {
+        .mobile-media();
+      }
     }
 
     .space-walker {
@@ -119,9 +144,18 @@
         width: 90%;
         margin: 1rem 0;
       }
+      @media @tablet {
+        width: 90%;
+        margin: 1rem 0;
+      }
     }
 
     @media @mobile {
+      .mobile-flex(@direction: column-reverse);
+      padding: 0;
+      margin: 2rem 0;
+    }
+    @media @tablet {
       .mobile-flex(@direction: column-reverse);
       padding: 0;
       margin: 2rem 0;
